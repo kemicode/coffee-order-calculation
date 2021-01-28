@@ -1,0 +1,43 @@
+#Name:Oluwakemi Labadie
+#Course Number: COP1000
+#Program for an online MoonBucks coffee order
+#Pseudocode
+#start program
+#input the coffee pound range and corresponding prices
+#input shipping charge per pound
+#input sales tax equals 7% of total cost of coffee
+#input if coffee total is less than $150 = free shipping else charge $1.00 per pound
+#print result
+#end program
+
+#start program
+
+#determine coffee price per pound
+
+#Start Program
+
+CostOfCoffee = int(input('How many pounds of coffee do you want'))
+if CostOfCoffee >=1 and CostOfCoffee<=9:
+    Cost = CostOfCoffee *12.00
+    print('Cost of coffee is:', Cost)
+elif CostOfCoffee <=10 and CostOfCoffee>=19:
+    Cost = CostOfCoffee * 10.00
+    print('Cost of coffee is:', Cost)
+elif CostOfCoffee >=20 and CostOfCoffee>=39:
+    Cost = CostOfCoffee * 8.75
+    print('Cost of coffee is:', Cost)
+elif CostOfCoffee <= 40:
+    Cost = CostOfCoffee * 7.50
+    print('Cost of coffee is:', Cost)
+else:
+    print("You should only be inputting positive, non-zero numbers for the number of pounds of coffee.")
+Shipping = Cost * 1
+if Cost >= 150:
+    print('Shipping is free')
+else :  
+    print(f'Shipping fee: ${Shipping:.2f}.')
+Tax = Cost * .07
+print(f'7% sales tax = ${Tax:.2f}.')
+TotalCost = Cost + Shipping + Tax
+print(f'Total Payable ${TotalCost:.2f}.')
+#End program
